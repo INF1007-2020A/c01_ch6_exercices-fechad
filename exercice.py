@@ -20,8 +20,9 @@ def anagrams(words: list = None) -> bool:
 
 
 def contains_doubles(items: list) -> bool:
-    uniques = set(list)
-    return len(set) == len(list)
+    my_list = [3, 3, 5, 6, 1, 1]
+    uniques = set(my_list)
+    return len(uniques) == len(my_list)
 
 
 def best_grades(student_grades: dict) -> dict:
@@ -60,13 +61,17 @@ def histogram(sentence: str) -> tuple:
 
 def get_recipes():
     # TODO: Demander le nom d'une recette, puis ses ingrédients et enregistrer dans une structure de données 
-    pass
+    recipe = input("Veuilles entrer le nom d'une recette. ")
+    nb_ingredients = int(input("veuiller entrer le nombre d'ingrédients. "))
+    ingredients = tuple(input("Veuiller entrer un ingrédient. ")for i in range(nb_ingredients))
+    recipe_book = {recipe: ingredients}
+
 
 
 def print_recipe(ingredients) -> None:
     # TODO: Demander le nom d'une recette, puis l'afficher si elle existe
-    pass
-
+    desired_recipe = input("Veuillez entrez la recette désiré. ")
+   return 
 
 def main() -> None:
     print(f"On essaie d'ordonner les valeurs...")
