@@ -26,15 +26,36 @@ def contains_doubles(items: list) -> bool:
 
 def best_grades(student_grades: dict) -> dict:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
-    return {}
+    list_student, list_grades = [], []
+    nom, note = None, None
+    for student in student_grades:
+        student_grades[student] = sum(student_grades[student]) / len(student_grades[student])
+        list_student.append(student)
+        list_grades.append(student_grades[student])
+        
+    for student in range(len(list_student)):
+        if list_grades[student] > list_grades[student-1]:
+            nom = list_student[student]
+            note = list_grades[student]
+            return nom, note
+    
 
 
 def histogram(sentence: str) -> tuple:
     # TODO: Créer l'histogramme a l'aide d'un dictionnaire
     #       Afficher l'histogramme et les lettres les plus fréquentes
     #       Retourner l'histogramme et le tableau de lettres
-
-    return {}, []
+    histohramme = {}
+    for char in sentence:
+        if char in hist:
+            hist[char] += 1
+        else:
+            hist[char] = 1
+    frequency = 5
+    most_frequent_chars = [k for k, v in histogram.items() if v > frequency and key != " "]
+    
+   
+    return hist, most_frequent_chars
 
 
 def get_recipes():
